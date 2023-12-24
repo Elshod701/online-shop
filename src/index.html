@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+
+<body>
+  <section class="bg-slate-900 h-[100vh] flex items-center justify-center">
+    <div class="container relative mx-auto w-[1640px] py-4 px-5 bg-blue-200 rounded-xl">
+      <div class="title font-bold flex items-center justify-center gap-4">
+        <img class="w-[80px] h-[80px]" src="https://cdn.punchng.com/wp-content/uploads/2017/03/29201341/soft-drinks.png"
+          alt="">
+        <h1 class="text-center font-mono text-4xl">WHAT DO YOU WANT FOR DRINK ?</h1>
+      </div>
+
+      <div class="wrapper flex items-start justify-center gap-4">
+        <div class="products border-r-4 border-r-black border-solid  p-3 gap-3 flex justify-evenly flex-wrap w-[650px]">
+        </div>
+        <div class="shop p-3 gap-2 flex justify-evenly flex-wrap w-[650px]">
+        </div>
+      </div>
+      <h1 id="total" class="mr-[100px] text-end text-3xl font-extrabold"></h1>
+      <button
+        class="clear  bg-red-600 px-[100px] py-[20px] text-3xl absolute top-[90%] right-[20%] rounded-2xl hover:bg-red-950 text-white">Clear
+        All</button>
+    </div>
+  </section>
+</body>
+<script type="module" src="./js/main.js"></script>
+
+</html>
