@@ -1,9 +1,11 @@
 import data from "./data.js"
+import { saveData, getData } from "./localStorage.js";
 const productWrapper = document.querySelector(".products");
 const shopWrapper = document.querySelector(".shop");
 const total_price = document.getElementById("total");
 const clearBtn = document.querySelector(".clear");
-let shop = [];
+const oldCart = getData("shop");
+const shop = oldCart ? oldCart : [];
 function setTotalPrice() {
   total_price.innerHTML = shop.reduce((a, b) => Number(a) + Number(b.userPrice), 0) + " $";
 };
@@ -39,6 +41,7 @@ const shopRender = () => {
         </div> 
     `).join("");
   setTotalPrice();
+  saveData("shop", shop);
 }
 shopRender();
 productWrapper.addEventListener("click", (e) => {
